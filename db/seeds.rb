@@ -36,7 +36,7 @@ def new_customer
 
     rand(1..10).times do
         new_order = Order.new(
-                    status: ["being process", "in transit", "delivered"].sample
+                    status: ["being processed", "in transit", "delivered"].sample
                     )
         new_order.product_id = Product.order('RANDOM()').first.id
         new_order.customer_id = customer.id
